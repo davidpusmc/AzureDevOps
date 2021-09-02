@@ -1,0 +1,51 @@
+{
+    "manifestVersion": 1,
+    "id": "SendReleaseAgenda",
+    "publisher": "DavidPerez",
+    "version": "1.14.0",
+    "name": "Send Release Agenda",
+    "description": "Will Generate Release Item Agenda and send email to Recipient list.",
+    "public": false,
+    "categories": ["Azure Repos", "Azure Pipelines", "Azure Artifacts", "Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "scopes": [
+        "vso.code_write", "vso.build_execute", "vso.work_write"
+    ],
+    "icons": 
+    {
+        "default": "Tasks/icon.png"
+    },
+    "tags":[
+        "Work", "work", "Item", "item", "Work Item", "work item", "utility", "Utility"
+    ],
+    "branding": {
+        "color": "rgb(34, 34, 34)",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://dev.azure.com/SWBC-FigWebDev/RM.Test/_git/TaskCloseWorkItem"
+    },
+    "contributions": [
+        {
+            "id": "my-hub",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "Tasks",
+            "addressable": true
+        }
+    ]
+}

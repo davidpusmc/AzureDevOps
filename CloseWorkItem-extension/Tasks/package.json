@@ -1,0 +1,26 @@
+{
+  "name": "tasks",
+  "version": "1.4.3",
+  "description": "Auto Closes WorkItems within a build",
+  "main": "CloseWorkItemScript.ps1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Auto",
+    "close",
+    "work",
+    "item",
+    "build"
+  ],
+  "author": "David Perez",
+  "license": "ISC",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^3.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.3",
+    "@types/q": "^1.5.4",
+    "typescript": "^4.0.2"
+  }
+}

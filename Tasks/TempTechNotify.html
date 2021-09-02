@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>  
+</head>
+
+<body>
+    <br>
+    <table style="font-family: Arial, Helvetica, sans-serif; text-align: left; font-size: 12pt; border: outset; border-width: 10px; border-color: #0B828F; padding: 2px; table-layout: auto; background-color: #b5f3f7;" align="center" bgcolor="#5AC5CB">
+        <tr style="background-color: #009CA6; border-style:outset; border-width: 3px; text-align: center;">
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Work Item</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Application</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Release</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Description</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Azure Project</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Development Manager</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Developer</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Tester</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Related Tasks</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Deployment Date & Time</th>
+            <th style="font-weight: bold; font-variant-caps: titling-caps; border-bottom-style: solid; border-spacing:0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">Status</th>
+        </tr>
+        {{#each data}}
+        <tr style="border: solid; border-spacing: 0cm; background-color: #e1fdff;">
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;"><a href="https://dev.azure.com/SWBC-FigWebDev/{{System}}/_workitems/edit/{{WID}}">{{Type}} {{WID}}</a></td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">{{Application}}</td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;"><a href="{{Release}}">{{ReleaseName}}</a></td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">{{Description}}</td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">{{System}}</td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">{{DevMan}}</td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">{{Developer}}</td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">{{Tester}}</td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">{{RelatedTasks}}</td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;">{{DD}}</td>
+            <td style="border: solid; border-spacing: 0cm; border-color: #0B828F; border-width: 1px; padding: auto; font-family: Arial, Helvetica, sans-serif; color: #28334A;"></td>
+        </tr>
+        {{/each}}
+
+    </table>
+    <br>
+
+    <footer>Respectfully, <br><a href="mailto: FigDevOps@swbc.com">Release Managment Team</a></footer>
+</body>
+
+</html>

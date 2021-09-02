@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleApp1": {
+      "commandName": "Project",
+      "commandLineArgs": "https://dev.azure.com/SWBC-FigWebDev k6negdnyagot2e35rlqlc4ovxeksmmmgv2ojn4olncq7eujbmu4a 208005 "
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "manifestVersion": 1,
+    "id": "CloseWorkItem",
+    "publisher": "DavidPerez",
+    "version": "1.4.3",
+    "name": "Close Work Item",
+    "description": "Automatically close workitems within any given build",
+    "public": false,
+    "categories": ["Azure Repos", "Azure Pipelines", "Azure Artifacts", "Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "scopes": [
+        "vso.code_write", "vso.build_execute", "vso.work_write"
+    ],
+    "icons": 
+    {
+        "default": "Tasks/icon.png"
+    },
+    "branding": {
+        "color": "rgb(34, 34, 34)",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://dev.azure.com/SWBC-FigWebDev/RM.Test/_git/TaskCloseWorkItem"
+    },
+    "contributions": [
+        {
+            "id": "my-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "Close Work Item",
+                "uri": "CloseWorkItemScript.ps1"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "Tasks",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}

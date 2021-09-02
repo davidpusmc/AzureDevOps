@@ -1,0 +1,56 @@
+{
+    "id": "9bdfe958-cb68-4afd-b22b-80c28c6777e7",
+    "name": "CloseWorkItemScript",
+    "friendlyName": "Close Work Item",
+    "description": "Task will close workitems attatched to the pipeline",
+    "author": "David Perez",
+    "helpMarkDown": "Replace with markdown to show in help",
+    "category": "Utility",
+    "visibility": [
+      "Build",
+      "Release"
+    ],
+    "demands": [],
+    "version": {
+      "Major": "1",
+      "Minor": "4",
+      "Patch": "3"
+    },
+    "minimumAgentVersion": "1.95.0",
+    "instanceNameFormat": "CloseWorkItemScript",
+    "groups": [
+      {
+          "name": "utility", 
+          "displayName": "Utility",
+          "isExpand": false
+      }
+    ],
+    "inputs": [
+      {
+        "name": "StateChange",
+        "type": "string",
+        "label": "Work Item State",
+        "defaultValue": "",
+        "groupName": "Utility",
+        "required": true,
+        "helpMarkDown": "Where the state of work item is passed."
+      },
+      {
+        "name": "WorkItemType",
+        "type": "string",
+        "label": "Work Item Type",
+        "defaultValue": "",
+        "groupName": "utility",
+        "required": true,
+        "helpMarkDown": "Where the type of the work item is passed"
+      }
+    ],
+    "execution": {
+      "PowerShell": {
+        "target": "$(currentDirectory)\\CloseWorkItemScript.ps1",
+        "argumentFormat": "",
+        "WorkingDirectory":"$(currentDirectory)"
+      }
+  
+      }
+    }
