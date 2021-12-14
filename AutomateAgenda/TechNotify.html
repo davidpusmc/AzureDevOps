@@ -1,0 +1,186 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+    <meta name=Generator content="Microsoft Word 15 (filtered medium)">
+    <!--[if !mso]>
+    <style>v\:* {behavior:url(#default#VML);}
+      o\:* {behavior:url(#default#VML);}
+      w\:* {behavior:url(#default#VML);}
+      .shape {behavior:url(#default#VML);}
+    </style>
+    <![endif]-->
+    <style class="doNotInline">
+        {{{stylesDoNotInline}}}
+    </style>
+    <!--[if gte mso 9]>
+    <xml>
+      <o:shapedefaults v:ext="edit" spidmax="1026" />
+    </xml>
+    <![endif]--><!--[if gte mso 9]>
+    <xml>
+      <o:shapelayout v:ext="edit">
+        <o:idmap v:ext="edit" data="1" />
+      </o:shapelayout>
+    </xml>
+    <![endif]-->
+</head>
+<body lang=EN-US>
+  <div class=WordSection1>
+    <h1>{{Subject}}</h1>
+    <table class=MsoNormalTable>
+      <tr>
+        <td valign=top class="TableHeaderStart" style="min-width:4em">
+          <p class="MsoNormal TableHeader">
+            <b>
+              <span class="TableHeader">
+                Work Item
+              </span>
+            </b>
+          </p>
+        </td>
+        <td valign=top class="TableHeaderMiddle" style="min-width:8em">
+            <p class="MsoNormal TableHeader">
+              <b>
+                <span class="TableHeader">
+                  Release
+                </span>
+              </b>
+            </p>
+        </td>
+        <td valign=top class="TableHeaderMiddle" style="min-width:8em">
+          <p class="MsoNormal TableHeader">
+            <b>
+              <span class="TableHeader">
+                Application
+              </span>
+            </b>
+          </p>
+        </td>
+        <td valign=top class="TableHeaderMiddle" style="min-width:6em">
+          <p class="MsoNormal TableHeader">
+            <b>
+              <span class="TableHeader">
+                Description
+              </span>
+            </b>
+          </p>
+        </td>
+        <td valign=top class="TableHeaderMiddle" style="min-width:8em">
+          <p class="MsoNormal TableHeader">
+            <b>
+              <span class="TableHeader">
+                Development Manager
+              </span>
+            </b>
+          </p>
+        </td>
+        <td valign=top class="TableHeaderMiddle" style="min-width:8em">
+          <p class="MsoNormal TableHeader">
+            <b>
+              <span class="TableHeader">
+                Developer
+              </span>
+            </b>
+          </p>
+        </td>
+        <td valign=top class="TableHeaderMiddle" style="min-width:8em">
+          <p class="MsoNormal TableHeader">
+            <b>
+              <span class="TableHeader">
+                Tester
+              </span>
+            </b>
+          </p>
+        </td>
+        <td valign=top class="TableHeaderMiddle" style="min-width:5em">
+          <p class="MsoNormal TableHeader">
+            <b>
+              <span class="TableHeader">
+                Related Tasks
+              </span>
+            </b>
+          </p>
+        </td>
+        <td valign=top class="TableHeaderMiddle" style="min-width:5em">
+            <p class="MsoNormal TableHeader">
+              <b>
+                <span class="TableHeader">
+                  Deploy Time
+                </span>
+              </b>
+            </p>
+          </td>
+          <td valign=top class="TableHeaderMiddle" style="min-width:5em">
+            <p class="MsoNormal TableHeader">
+              <b>
+                <span class="TableHeader">
+                  STATUS 
+                </span>
+              </b>
+            </p>
+          </td>
+      </tr>
+      {{#each Releases}}
+      <tr>
+        <td valign=top class="TableRowStart" >
+          <p class="MsoNormal TableRow">
+            <a href="https://dev.azure.com/SWBC-FigWebDev/{{System}}/_workitems/edit/{{WID}}">{{Type}} {{WID}}</a>
+          </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+            <p class="MsoNormal TableRow">
+              {{#if HasRelease}}
+              <a href="{{Release}}">{{ReleaseName}}</a>
+              {{else}}
+              No release was found.
+              {{/if}}
+            </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+          <p class=NormalwithoutSpacing>
+            {{Application}}
+          </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+            <p class=NormalwithoutSpacing>
+              {{Description}}
+            </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+            <p class=NormalwithoutSpacing>
+              {{DevMan}}
+            </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+            <p class=NormalwithoutSpacing>
+              {{Developer}}
+            </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+            <p class=NormalwithoutSpacing>
+              {{Tester}}
+            </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+            <p class=NormalwithoutSpacing>
+              {{RelatedTasks}}
+            </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+          <p class=NormalwithoutSpacing>
+            {{DDHumanFormat}}
+          </p>
+        </td>
+        <td valign=top class="TableRowMiddle" >
+          <p class=NormalwithoutSpacing>
+            
+          </p>
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+    <br/>
+    {{{Signature}}}
+    </div>
+  </body>
+</html>

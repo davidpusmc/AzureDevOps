@@ -1,0 +1,27 @@
+{
+    "id": "d2b94783-ebbc-4cb6-803d-d590e7d0ae43",
+    "name": "SendReleaseAgenda",
+    "friendlyName": "Send Release Agenda",
+    "description": "Will Generate Release Item Agenda and send email to Recipient list.",
+    "author": "David Perez",
+    "helpMarkDown": "Replace with markdown to show in help",
+    "category": "Utility",
+    "visibility": [
+      "Build",
+      "Release"
+    ],
+    "demands": [],
+    "version": {
+      "Major": "1",
+      "Minor": "75",
+      "Patch": "0"
+    },
+    "minimumAgentVersion": "1.95.0",
+    "instanceNameFormat": "SendReleaseAgenda",
+    "groups": [],
+    "execution": {
+      "PowerShell": {
+        "target": "$(currentDirectory)\\InvokeSendReleaseAgenda.ps1"
+      }
+    }
+  }

@@ -1,0 +1,753 @@
+      <!--
+        /* Font Definitions */
+        @font-face
+        	{font-family:Wingdings;
+        	panose-1:5 0 0 0 0 0 0 0 0 0;}
+        @font-face
+        	{font-family:"Cambria Math";
+        	panose-1:2 4 5 3 5 4 6 3 2 4;}
+        @font-face
+        	{font-family:"Calibri Light";
+        	panose-1:2 15 3 2 2 2 4 3 2 4;}
+        @font-face
+        	{font-family:Calibri;
+        	panose-1:2 15 5 2 2 2 4 3 2 4;}
+        @font-face
+        	{font-family:"Open Sans";
+        	panose-1:0 0 0 0 0 0 0 0 0 0;}
+        @font-face
+        	{font-family:Consolas;
+        	panose-1:2 11 6 9 2 2 4 3 2 4;}
+        /* Style Definitions */
+        p.MsoNormal, li.MsoNormal, div.MsoNormal
+        	{margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:0in;
+        	line-height:105%;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        h1
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 1 Char";
+        	margin-top:12.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:13.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#009CA6;}
+        h2
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 2 Char";
+        	margin-top:2.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:13.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#009CA6;
+        	font-weight:normal;}
+        h3
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 3 Char";
+        	margin-top:2.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:13.0pt;
+        	font-family:"Calibri Light",sans-serif;
+        	color:#009CA6;
+        	letter-spacing:.5pt;
+        	font-weight:normal;}
+        h4
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 4 Char";
+        	margin-top:2.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#7A9A01;}
+        h5
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 5 Char";
+        	margin-top:2.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#7A9A01;
+        	font-weight:normal;}
+        h6
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 6 Char";
+        	margin-top:2.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:11.0pt;
+        	font-family:"Calibri Light",sans-serif;
+        	color:#7A9A01;
+        	letter-spacing:.5pt;
+        	font-weight:normal;}
+        p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 7 Char";
+        	margin-top:2.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#2F3C57;
+        	font-weight:bold;}
+        p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 8 Char";
+        	margin-top:2.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#2F3C57;}
+        p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+        	{mso-style-priority:9;
+        	mso-style-link:"Heading 9 Char";
+        	margin-top:2.0pt;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	page-break-after:avoid;
+        	font-size:11.0pt;
+        	font-family:"Calibri Light",sans-serif;
+        	color:#2F3C57;
+        	letter-spacing:.5pt;}
+        p.MsoHeader, li.MsoHeader, div.MsoHeader
+        	{mso-style-priority:99;
+        	mso-style-link:"Header Char";
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        p.MsoFooter, li.MsoFooter, div.MsoFooter
+        	{mso-style-priority:99;
+        	mso-style-link:"Footer Char";
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        p.MsoTitle, li.MsoTitle, div.MsoTitle
+        	{mso-style-priority:7;
+        	mso-style-link:"Title Char";
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	font-size:18.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#2F3C57;}
+        p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+        	{mso-style-priority:7;
+        	mso-style-link:"Title Char";
+        	mso-style-type:export-only;
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	font-size:18.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#2F3C57;}
+        p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+        	{mso-style-priority:7;
+        	mso-style-link:"Title Char";
+        	mso-style-type:export-only;
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	font-size:18.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#2F3C57;}
+        p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+        	{mso-style-priority:7;
+        	mso-style-link:"Title Char";
+        	mso-style-type:export-only;
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	font-size:18.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#2F3C57;}
+        p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+        	{mso-style-priority:8;
+        	mso-style-link:"Subtitle Char";
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:0in;
+        	line-height:105%;
+        	font-size:11.0pt;
+        	font-family:"Calibri Light",sans-serif;
+        	color:#3C2C19;
+        	letter-spacing:-.15pt;}
+        a:link, span.MsoHyperlink
+        	{mso-style-priority:99;
+        	color:#5AC5CB;
+        	text-decoration:underline;}
+        a:visited, span.MsoHyperlinkFollowed
+        	{mso-style-priority:99;
+        	color:#001020;
+        	text-decoration:underline;}
+        strong
+        	{mso-style-priority:22;
+        	color:#2F3C57;}
+        em
+        	{mso-style-priority:20;
+        	color:#009CA6;
+        	letter-spacing:.15pt;}
+        pre
+        	{mso-style-priority:99;
+        	mso-style-link:"HTML Preformatted Char";
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	font-size:10.0pt;
+        	font-family:"Courier New";
+        	color:#3C2C19;}
+        span.MsoPlaceholderText
+        	{mso-style-priority:99;
+        	color:gray;}
+        p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+        	{mso-style-priority:34;
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:.5in;
+        	mso-add-space:auto;
+        	line-height:105%;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+        	{mso-style-priority:34;
+        	mso-style-type:export-only;
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:.5in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	line-height:105%;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+        	{mso-style-priority:34;
+        	mso-style-type:export-only;
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:0in;
+        	margin-left:.5in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	line-height:105%;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+        	{mso-style-priority:34;
+        	mso-style-type:export-only;
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:.5in;
+        	mso-add-space:auto;
+        	line-height:105%;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        span.MsoSubtleEmphasis
+        	{mso-style-priority:19;
+        	font-family:"Calibri Light",sans-serif;
+        	color:#876338;
+        	letter-spacing:.15pt;
+        	font-style:italic;}
+        span.MsoIntenseEmphasis
+        	{mso-style-priority:21;
+        	color:#E57200;
+        	letter-spacing:.15pt;
+        	font-style:italic;}
+        span.Heading1Char
+        	{mso-style-name:"Heading 1 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 1";
+        	font-family:"Times New Roman",serif;
+        	color:#009CA6;
+        	font-weight:bold;}
+        span.Heading2Char
+        	{mso-style-name:"Heading 2 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 2";
+        	font-family:"Times New Roman",serif;
+        	color:#009CA6;}
+        span.HTMLPreformattedChar
+        	{mso-style-name:"HTML Preformatted Char";
+        	mso-style-priority:99;
+        	mso-style-link:"HTML Preformatted";
+        	font-family:"Courier New";}
+        span.Heading3Char
+        	{mso-style-name:"Heading 3 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 3";
+        	font-family:"Calibri Light",sans-serif;
+        	color:#009CA6;
+        	letter-spacing:.5pt;}
+        span.Heading4Char
+        	{mso-style-name:"Heading 4 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 4";
+        	font-family:"Times New Roman",serif;
+        	color:#7A9A01;
+        	font-weight:bold;}
+        span.TitleChar
+        	{mso-style-name:"Title Char";
+        	mso-style-priority:7;
+        	mso-style-link:Title;
+        	font-family:"Times New Roman",serif;
+        	color:#2F3C57;}
+        span.SubtitleChar
+        	{mso-style-name:"Subtitle Char";
+        	mso-style-priority:8;
+        	mso-style-link:Subtitle;
+        	font-family:"Calibri Light",sans-serif;
+        	color:#3C2C19;
+        	letter-spacing:-.15pt;}
+        span.Heading5Char
+        	{mso-style-name:"Heading 5 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 5";
+        	font-family:"Times New Roman",serif;
+        	color:#7A9A01;}
+        span.Heading6Char
+        	{mso-style-name:"Heading 6 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 6";
+        	font-family:"Calibri Light",sans-serif;
+        	color:#7A9A01;
+        	letter-spacing:.5pt;}
+        span.Heading7Char
+        	{mso-style-name:"Heading 7 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 7";
+        	font-family:"Times New Roman",serif;
+        	color:#2F3C57;
+        	font-weight:bold;}
+        span.Heading8Char
+        	{mso-style-name:"Heading 8 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 8";
+        	font-family:"Times New Roman",serif;
+        	color:#2F3C57;}
+        span.Heading9Char
+        	{mso-style-name:"Heading 9 Char";
+        	mso-style-priority:9;
+        	mso-style-link:"Heading 9";
+        	font-family:"Calibri Light",sans-serif;
+        	color:#2F3C57;
+        	letter-spacing:.5pt;}
+        p.NormalwithHorizontalLine, li.NormalwithHorizontalLine, div.NormalwithHorizontalLine
+        	{mso-style-name:"Normal with Horizontal Line";
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:0in;
+        	line-height:105%;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        p.Code, li.Code, div.Code
+        	{mso-style-name:Code;
+        	mso-style-priority:23;
+        	mso-style-link:"Code Char";
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:0in;
+        	mso-add-space:auto;
+        	line-height:105%;
+        	background:#EAE6E3;
+        	font-size:10.0pt;
+        	font-family:Consolas;
+        	color:#2F3C57;}
+        p.CodeCxSpFirst, li.CodeCxSpFirst, div.CodeCxSpFirst
+        	{mso-style-name:CodeCxSpFirst;
+        	mso-style-priority:23;
+        	mso-style-link:"Code Char";
+        	mso-style-type:export-only;
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	line-height:105%;
+        	background:#EAE6E3;
+        	font-size:10.0pt;
+        	font-family:Consolas;
+        	color:#2F3C57;}
+        p.CodeCxSpMiddle, li.CodeCxSpMiddle, div.CodeCxSpMiddle
+        	{mso-style-name:CodeCxSpMiddle;
+        	mso-style-priority:23;
+        	mso-style-link:"Code Char";
+        	mso-style-type:export-only;
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	line-height:105%;
+        	background:#EAE6E3;
+        	font-size:10.0pt;
+        	font-family:Consolas;
+        	color:#2F3C57;}
+        p.CodeCxSpLast, li.CodeCxSpLast, div.CodeCxSpLast
+        	{mso-style-name:CodeCxSpLast;
+        	mso-style-priority:23;
+        	mso-style-link:"Code Char";
+        	mso-style-type:export-only;
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:0in;
+        	mso-add-space:auto;
+        	line-height:105%;
+        	background:#EAE6E3;
+        	font-size:10.0pt;
+        	font-family:Consolas;
+        	color:#2F3C57;}
+        p.NormalwithoutSpacing, li.NormalwithoutSpacing, div.NormalwithoutSpacing
+        	{mso-style-name:"Normal without Spacing";
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	line-height:105%;
+        	font-size:11.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        p.TitleDark, li.TitleDark, div.TitleDark
+        	{mso-style-name:"Title Dark";
+        	mso-style-priority:7;
+        	mso-style-link:"Title Dark Char";
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	background:#2F3C57;
+        	font-size:18.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#EAE6E3;}
+        p.TitleDarkCxSpFirst, li.TitleDarkCxSpFirst, div.TitleDarkCxSpFirst
+        	{mso-style-name:"Title DarkCxSpFirst";
+        	mso-style-priority:7;
+        	mso-style-link:"Title Dark Char";
+        	mso-style-type:export-only;
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	background:#2F3C57;
+        	font-size:18.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#EAE6E3;}
+        p.TitleDarkCxSpMiddle, li.TitleDarkCxSpMiddle, div.TitleDarkCxSpMiddle
+        	{mso-style-name:"Title DarkCxSpMiddle";
+        	mso-style-priority:7;
+        	mso-style-link:"Title Dark Char";
+        	mso-style-type:export-only;
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	background:#2F3C57;
+        	font-size:18.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#EAE6E3;}
+        p.TitleDarkCxSpLast, li.TitleDarkCxSpLast, div.TitleDarkCxSpLast
+        	{mso-style-name:"Title DarkCxSpLast";
+        	mso-style-priority:7;
+        	mso-style-link:"Title Dark Char";
+        	mso-style-type:export-only;
+        	margin:0in;
+        	margin-bottom:.0001pt;
+        	mso-add-space:auto;
+        	background:#2F3C57;
+        	font-size:18.0pt;
+        	font-family:"Calibri",sans-serif;
+        	color:#EAE6E3;}
+        span.CodeChar
+        	{mso-style-name:"Code Char";
+        	mso-style-priority:23;
+        	mso-style-link:Code;
+        	font-family:Consolas;
+        	color:#2F3C57;
+        	background:#EAE6E3;}
+        p.SubtitleDark, li.SubtitleDark, div.SubtitleDark
+        	{mso-style-name:"Subtitle Dark";
+        	mso-style-priority:8;
+        	mso-style-link:"Subtitle Dark Char";
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:0in;
+        	line-height:105%;
+        	background:#2F3C57;
+        	font-size:11.0pt;
+        	font-family:"Calibri Light",sans-serif;
+        	color:#F7F7F6;
+        	letter-spacing:-.15pt;}
+        span.TitleDarkChar
+        	{mso-style-name:"Title Dark Char";
+        	mso-style-priority:7;
+        	mso-style-link:"Title Dark";
+        	font-family:"Times New Roman",serif;
+        	color:#EAE6E3;
+        	background:#2F3C57;}
+        p.SubtitleBright, li.SubtitleBright, div.SubtitleBright
+        	{mso-style-name:"Subtitle Bright";
+        	mso-style-priority:8;
+        	mso-style-link:"Subtitle Bright Char";
+        	margin-top:0in;
+        	margin-right:0in;
+        	margin-bottom:8.0pt;
+        	margin-left:0in;
+        	line-height:105%;
+        	background:#EAE6E3;
+        	font-size:11.0pt;
+        	font-family:"Calibri Light",sans-serif;
+        	color:#009CA6;
+        	letter-spacing:-.15pt;}
+        span.SubtitleDarkChar
+        	{mso-style-name:"Subtitle Dark Char";
+        	mso-style-priority:8;
+        	mso-style-link:"Subtitle Dark";
+        	font-family:"Calibri Light",sans-serif;
+        	color:#F7F7F6;
+        	letter-spacing:-.15pt;
+        	background:#2F3C57;}
+        span.SubtitleBrightChar
+        	{mso-style-name:"Subtitle Bright Char";
+        	mso-style-priority:8;
+        	mso-style-link:"Subtitle Bright";
+        	font-family:"Calibri Light",sans-serif;
+        	color:#009CA6;
+        	letter-spacing:-.15pt;
+        	background:#EAE6E3;}
+        span.HeaderChar
+        	{mso-style-name:"Header Char";
+        	mso-style-priority:99;
+        	mso-style-link:Header;
+        	color:#3C2C19;}
+        span.FooterChar
+        	{mso-style-name:"Footer Char";
+        	mso-style-priority:99;
+        	mso-style-link:Footer;
+        	color:#3C2C19;}
+        p.msonormal0, li.msonormal0, div.msonormal0
+        	{mso-style-name:msonormal;
+        	mso-margin-top-alt:auto;
+        	margin-right:0in;
+        	mso-margin-bottom-alt:auto;
+        	margin-left:0in;
+        	font-size:12.0pt;
+        	font-family:"Times New Roman",serif;}
+        span.EmailStyle60
+        	{mso-style-type:personal;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        span.EmailStyle61
+        	{mso-style-type:personal;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        span.EmailStyle62
+        	{mso-style-type:personal-reply;
+        	font-family:"Calibri",sans-serif;
+        	color:#3C2C19;}
+        .MsoChpDefault
+        	{mso-style-type:export-only;
+        	font-size:10.0pt;}
+        @page WordSection1
+        	{size:8.5in 11.0in;
+        	margin:1.0in 1.0in 1.0in 1.0in;}
+        div.WordSection1
+        	{page:WordSection1;}
+        /* List Definitions */
+        @list l0
+        	{mso-list-id:205605076;
+        	mso-list-template-ids:-2134314798;
+        	mso-list-style-priority:99;
+        	mso-list-style-name:"List Shallow Bulleted";}
+        @list l0:level1
+        	{mso-level-number-format:bullet;
+        	mso-level-text:\F0B7;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:9.0pt;
+        	text-indent:-9.0pt;
+        	font-family:Symbol;
+        	color:#009CA6;}
+        @list l0:level2
+        	{mso-level-number-format:bullet;
+        	mso-level-text:\F0A7;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:.25in;
+        	text-indent:-9.0pt;
+        	font-family:Wingdings;
+        	color:#009CA6;}
+        @list l0:level3
+        	{mso-level-number-format:bullet;
+        	mso-level-text:-;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:27.0pt;
+        	text-indent:-9.0pt;
+        	font-family:"Open Sans";
+        	color:#009CA6;}
+        @list l0:level4
+        	{mso-level-number-format:bullet;
+        	mso-level-text:\F0B7;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:.5in;
+        	text-indent:-9.0pt;
+        	font-family:Symbol;
+        	color:#7A9A01;}
+        @list l0:level5
+        	{mso-level-number-format:bullet;
+        	mso-level-text:\F0A7;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:45.0pt;
+        	text-indent:-9.0pt;
+        	font-family:Wingdings;
+        	color:#7A9A01;}
+        @list l0:level6
+        	{mso-level-number-format:bullet;
+        	mso-level-text:-;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:.75in;
+        	text-indent:-9.0pt;
+        	font-family:"Open Sans";
+        	color:#7A9A01;}
+        @list l0:level7
+        	{mso-level-number-format:bullet;
+        	mso-level-text:\F0B7;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:63.0pt;
+        	text-indent:-9.0pt;
+        	font-family:Symbol;
+        	color:#2F3C57;}
+        @list l0:level8
+        	{mso-level-number-format:bullet;
+        	mso-level-text:\F0A7;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:1.0in;
+        	text-indent:-9.0pt;
+        	font-family:Wingdings;
+        	color:#2F3C57;}
+        @list l0:level9
+        	{mso-level-number-format:bullet;
+        	mso-level-text:-;
+        	mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:81.0pt;
+        	text-indent:-9.0pt;
+        	font-family:"Open Sans";
+        	color:#2F3C57;}
+        @list l1
+        	{mso-list-id:539366160;
+        	mso-list-template-ids:507800210;
+        	mso-list-style-priority:99;
+        	mso-list-style-name:"List Shallow Numbered";}
+        @list l1:level1
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:9.0pt;
+        	text-indent:-9.0pt;
+        	color:#009CA6;}
+        @list l1:level2
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:.25in;
+        	text-indent:-9.0pt;
+        	color:#7A9A01;}
+        @list l1:level3
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:27.0pt;
+        	text-indent:-9.0pt;
+        	color:#E57200;}
+        @list l1:level4
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:.5in;
+        	text-indent:-9.0pt;
+        	color:#9E007E;}
+        @list l1:level5
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:45.0pt;
+        	text-indent:-9.0pt;
+        	color:#D22630;}
+        @list l1:level6
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:.75in;
+        	text-indent:-9.0pt;
+        	color:#F2B826;}
+        @list l1:level7
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:63.0pt;
+        	text-indent:-9.0pt;
+        	color:#2F3C57;}
+        @list l1:level8
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:1.0in;
+        	text-indent:-9.0pt;
+        	color:#009CA6;}
+        @list l1:level9
+        	{mso-level-tab-stop:none;
+        	mso-level-number-position:left;
+        	margin-left:81.0pt;
+        	text-indent:-9.0pt;
+        	color:#7A9A01;}
+        ol
+        	{margin-bottom:0in;}
+        ul
+        	{margin-bottom:0in;}
+        -->
